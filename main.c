@@ -1,15 +1,15 @@
 #include <stdio.h>
+void f(void);
 
-int inc(int counter);
-
+int i;
 int main(void) {
-    int i;
-    printf("before the function call, i = %d\n", i);
-    inc(i);
-    printf("after the function call, i = %d\n", i);
+    for (i = 0; i < 5; i++) {
+        f();
+    }
     return 0;
 }
-int inc(int counter) {
-    counter++;
-    return counter;
+
+void f(void) {
+    for (i = 0; i < 10; i++)
+        printf("#");
 }
