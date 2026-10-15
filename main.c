@@ -1,11 +1,15 @@
 #include <stdio.h>
 
+int inc(int counter);
+
 int main(void) {
     int i;
-    for (i=0; i< 5; i++) {
-        int temp = i;
-        printf("temp = %d\n", temp);
-        temp++;
-    }
+    printf("before the function call, i = %d\n", i);
+    inc(i);
+    printf("after the function call, i = %d\n", i);
     return 0;
+}
+int inc(int counter) {
+    counter++;
+    return counter;
 }
