@@ -1,15 +1,10 @@
 #include <stdio.h>
+int all_files;
 
-int inc(int counter);
+extern void sub();
 
 int main(void) {
-    int i=10;
-    printf("before the function call, i = %d\n", i);
-    inc(i);
-    printf("after the function call, i = %d\n", i);
+    sub();
+    printf("%d\n", all_files);
     return 0;
-}
-int inc(int counter) {
-    counter++;
-    return counter;
 }
